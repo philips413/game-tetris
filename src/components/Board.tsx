@@ -26,13 +26,13 @@ export function Board({ board, currentPiece }: BoardProps) {
   }
   
   return (
-    <div className="grid grid-rows-20 gap-px bg-black border-4 border-gray-600 rounded-lg p-1 shadow-2xl">
+    <div className="grid grid-rows-20 gap-[1px] sm:gap-px bg-black border-2 sm:border-3 md:border-4 border-gray-600 rounded-lg p-0.5 sm:p-1 shadow-2xl max-w-xs sm:max-w-sm md:max-w-md mx-auto">
       {displayBoard.map((row, y) => (
-        <div key={y} className="grid grid-cols-10 gap-px">
+        <div key={y} className="grid grid-cols-10 gap-[1px] sm:gap-px">
           {row.map((cell, x) => (
             <div
               key={x}
-              className={`w-7 h-7 border border-white/10 rounded-sm transition-colors duration-100 ${
+              className={`w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 border border-white/10 rounded-sm transition-colors duration-100 ${
                 cell 
                   ? 'border-white/30 shadow-inner shadow-white/20' 
                   : 'bg-gray-800'
